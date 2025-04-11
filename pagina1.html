@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Ti, Mi Amor 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 🌸 Fondo Rosado Adaptable */
+    body, html {
+      height: 100%;
+      font-family: 'Quicksand', sans-serif;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #f8c8d8, #ffb6c1); /* Fondo rosado */
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* Contenedor principal */
+    .contenido {
+      text-align: center;
+      padding: 40px;
+      max-width: 800px;
+      margin: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Estilo del título */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5em;
+      color: #ff66b2;
+      text-shadow: 0 0 15px #ff99cc, 0 0 30px #ff66b2;
+      animation: textReveal 3s ease-in-out;
+    }
+
+    /* Animación del texto */
+    @keyframes textReveal {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Estilo del párrafo */
+    p {
+      font-size: 1.4em;
+      line-height: 1.8;
+      margin-top: 20px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+      animation: pulse 2s infinite alternate;
+    }
+
+    /* Animación de pulsación suave en el texto */
+    @keyframes pulse {
+      0% { color: #ffb6c1; }
+      100% { color: #ff66b2; }
+    }
+
+    /* Estilo del footer */
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: #312f30;
+      font-size: 1.2em;
+      text-shadow: 0 0 10px #1d1c1d;
+    }
+
+    /* Corazones flotantes */
+    .corazon {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      transform: rotate(45deg);
+      animation: flotar 8s infinite;
+      opacity: 0.8;
+    }
+
+    .corazon::before, .corazon::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .corazon::before {
+      top: -15px;
+      left: 0;
+    }
+
+    .corazon::after {
+      left: -15px;
+      top: 0;
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Estilo para las animaciones de fondo */
+    @keyframes backgroundMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor de contenido -->
+  <div class="contenido">
+    <h1>Para ti, mi solecita 💖</h1>
+    <p>
+      Desde que llegaste a mi vida, todo cambió. Cada día es más especial porque lo comparto contigo. <br><br>
+      Mi corazón late más fuerte cuando me das tu amor y tus mensajes llegan. Gracias por cada sonrisa, por cada momento, por cada mensaje tuyo que es una curita para mi. <br><br>
+      Te amo con todo mi ser, y siempre estaré a tu lado. Gracias por ser mi razón de ser, mi amor eterno. ❤️
+    </p>
+  </div>
+
+  <!-- Corazones flotando -->
+  <script>
+    function crearCorazon() {
+      const corazon = document.createElement('div');
+      corazon.classList.add('corazon');
+      corazon.style.left = Math.random() * 100 + 'vw';
+      corazon.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(corazon);
+
+      setTimeout(() => {
+        corazon.remove();
+      }, 10000);
+    }
+
+    setInterval(crearCorazon, 500);
+  </script>
+
+  <footer>
+    Con todo mi amor — DARY jsj 💌
+  </footer>
+
+</body>
+</html>
